@@ -1,7 +1,7 @@
 from app import app, db, login_manager
 from flask import render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user, login_required
-from forms import RegistrationForm, LoginForm
+from forms import RegistrationForm, LoginForm, ForgotPasswordForm
 from models import User
 
 # landing page
@@ -44,6 +44,12 @@ def login():
             return redirect(url_for('login'))
     
     return render_template('login.html', form=form)
+
+@app.route('/new_password', methods=['GET', 'POST'])
+def forgot_password():
+    form = ForgotPasswordForm()
+    
+    return render_template('forgot_password.html', form=form)
 
 # *for testing* user list
 @app.route('/users')
