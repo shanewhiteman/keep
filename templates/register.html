@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
     {% block title %}<title>Create new account | Keep</title>{% endblock %}
     {% block stylesheet %}<link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">{% endblock %}
+    {% block script %}
+        <script>
+            function showElement(elementId) {
+                let element = document.getElementById(elementId);
+                
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "block";
+                }
+            };
+
+            document.addEventListener("DOMContentLoaded", function(event) {
+                let passwordInput = document.querySelector("#password");
+
+                passwordInput.onclick = function() {
+                    showElement('password-requirements');
+                };
+            });
+        </script>
+    {% endblock %}
 
     {% block main %}
     <div class="main_content">
@@ -45,7 +66,17 @@
                     </div>
                     
                     <div class="login-form_password-container">
-                    {{ form.password(class="login-form_input", placeholder="Password") }}
+                    {{ form.password(id="password", class="login-form_input", placeholder="Password") }}
+                        <span id="password-requirements" class="password-message"> 
+                            Minimum requirements:
+                            <ul class="password-requirements-items">
+                                <li class="requirement-eight">At least eight characters long</li>
+                                <li class="requirement-number">At least 1 number</li>
+                                <li class="requirement-upper">At least 1 uppercase letter</li>
+                                <li class="requirement-lower">At least 1 lowercase letter</li>
+                                <li class="requirement-special">At least 1 special character</li>
+                            </ul>
+                        </span>
                     {% for error in form.password.errors %}
                         <span style="color: red;">[{{ error }}]</span>
                     {% endfor %}
@@ -56,6 +87,10 @@
                         {% for error in form.password2.errors %}
                             <span style="color: red;">[{{ error }}]</span>
                         {% endfor %}
+                    </div>
+
+                    <div class="login-form_reminder-container">
+                        {{ form.reminder(class="login-form_input", placeholder="Reminder (Optional)") }}
                     </div>
                     
                     <div class="login-form_submit-container">
