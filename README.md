@@ -1,5 +1,7 @@
 # [**Keep**](https://user-images.githubusercontent.com/31552294/207220233-f6dce19f-b2ef-47f2-be02-58a28220f195.png): Password Manager
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://user-images.githubusercontent.com/31552294/207220490-f0256769-c2f7-4932-aed2-16037fa1bf11.png"/>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/31552294/207220490-f0256769-c2f7-4932-aed2-16037fa1bf11.png"/>
+</div>
 
 ## About
 
