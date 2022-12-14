@@ -77,6 +77,10 @@ svg {
     font-size: small;
 }
 
+.password-requirements-items {
+    padding: 0px;
+}
+
 li {
     list-style: none;
     padding: 7px 40px;
