@@ -84,9 +84,10 @@ svg {
 li {
     list-style: none;
     padding: 7px 40px;
-    background-image: url("images/exclamation.svg");
+    background-image: url("https://user-images.githubusercontent.com/31552294/207744447-45d4124c-ce11-4cbb-b038-2e3fbdadaa2a.svg");
     background-repeat: no-repeat;
     background-position: left;
+    margin: 0;
     background-size: 48px;
 }
 
