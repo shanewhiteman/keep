@@ -72,6 +72,25 @@ svg {
     color: grey;
 }
 
+#password-requirements {
+    display: none;
+    font-size: small;
+}
+
+.password-requirements-items {
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    padding: 7px 40px;
+    background-image: url("https://user-images.githubusercontent.com/31552294/207744447-45d4124c-ce11-4cbb-b038-2e3fbdadaa2a.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 0;
+    background-size: 48px;
+}
+
 .login-form_button {
     padding: 10px;
     color: #ffffff;
@@ -84,8 +103,8 @@ svg {
     cursor: pointer;
 }
 
-.login-form_button {
-    background: #009578;
+.login-form_button:hover {
+    background: #008a6e;
 }
 
 .login-form_links {
